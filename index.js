@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var columns = 4;
+	var cardWidth = 130;
 	$('.set-check-btn').click(function(){
 		$('.card').css('border','solid rgb(0, 0, 0) 2px');
 		$('.alert').hide();
@@ -74,8 +76,9 @@ $(document).ready(function(){
 				}
 			}
 			if (showSet) {
+				var colorIndex = Math.floor(Math.random()*colors.length);
 				for (var i = 0; i < set.length; i++) {
-					set[i].css('border', colors[2]);
+					set[i].css('border', colors[colorIndex]);
 				}
 			}
 			if (set.length == 0) {
@@ -84,6 +87,43 @@ $(document).ready(function(){
 			else {
 				$('#set').show();
 			}
+		}
+	});
+	$('.add-column').click(function(){
+		if (columns < 7){ 
+			columns++;
+			$('.card-table').width(String(columns*cardWidth)+'px');
+			$('.lineWrapper').each(function(){
+				$(this).append('<div class="card">'+
+					'<select class="form-control btn btn-xs num">' +
+                        '<option value="0">1</option>' +
+                        '<option value="1">2</option>' +
+                        '<option value="2">3</option>' +
+                    '</select>' +
+                    '<select class="form-control btn btn-xs color">' +
+                        '<option value="0">green</option>' +
+                        '<option value="1">red</option>' +
+                        '<option value="2">purple</option>' +
+                    '</select>' +
+                    '<select class="form-control btn btn-xs pattern">' +
+                        '<option value="0">open</option>' +
+                        '<option value="1">striped</option>' +
+                        '<option value="2">filled</option>' +
+                    '</select>' +
+                    '<select class="form-control btn btn-xs shape">' +
+                        '<option value="0">ovals</option>' +
+                        '<option value="1">diamonds</option>' +
+                        '<option value="2">squiggles</option>' +
+                    '</select>' +
+				'</div>');
+			});
+		}
+	});
+	$('.rmv-column').click(function(){
+		if (columns > 1){ 
+			columns--;
+			$('.card-table').width(String(columns*cardWidth)+'px');
+			$( ".lineWrapper .card:last-child" ).remove();
 		}
 	});
 });

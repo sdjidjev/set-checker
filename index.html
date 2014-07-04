@@ -7,6 +7,9 @@
 		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="index.js"></script>
+        <title>Set Checker</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	</head>
 	<body>
 		<div class="card-table">
@@ -98,7 +101,7 @@
                         <option value="1">diamonds</option>
                         <option value="2">squiggles</option>
                     </select>
-				</div>
+				</div>                
 			</div>
 			<div class="lineWrapper">
 				<div class="card">
@@ -284,6 +287,10 @@
 		<div class="set-check-container">
             <button class="btn btn-default set-check-btn">Check for Sets</button>
             <label><input type="checkbox" checked class="show-set"> &nbsp;Show me the set.</label>
+        </div>
+        <div class="column-changer">
+            <button type="button" class="btn btn-success add-column">Add Column</button>
+            <button type="button" class="btn btn-warning rmv-column">Remove Column</button>
         </div>
         <div class="alert" id="duplicates">There are duplicate cards! Please fix them to the correct ones.</div>
         <div class="alert" id="no-set">There are no sets here!</div>

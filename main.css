@@ -30,13 +30,12 @@ body {
 }
 
 .card-table {
-	position: absolute;
-	width: 536px;
+	position: relative;
+	width: 520px;
 	height: 552px;
 	top: 0;
-	left: 50%;
-	margin-left: -268px;
-}
+	margin: auto;
+ }
 
 .selected {
 	border-color: #9494ff;
@@ -105,4 +104,11 @@ body {
 	padding: 10px;
 	background: rgba(148,148,255,0.8);
 	border-radius: 5px;
+}
+
+.column-changer {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 10px;
 }
