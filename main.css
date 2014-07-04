@@ -73,20 +73,36 @@ body {
 	color: #fff;
 }
 
-.set-check-btn {
-	width: 120px;
-	position: absolute;
-	left: 50%;
-	top: 555px;
-	margin-left: -60px;
-}
-
 .alert {
-	display: none;
 	color: red;
 	position: absolute;
-	top: 580px;
+	top: 600px;
 	width: 500px;
 	left: 50%;
 	margin-left: -250px;
+	display: none;
+}
+
+#duplicates {
+	display: none;
+}
+
+#no-set {
+	display: none;
+}
+
+.set-check-btn {
+	margin-right: 10px;
+}
+
+.set-check-container {
+	vertical-align: center;
+	position: absolute;
+	left: 50%;
+	top: 555px;
+	margin-left: -150px;
+	width: 300px;
+	padding: 10px;
+	background: rgba(148,148,255,0.8);
+	border-radius: 5px;
 }

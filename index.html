@@ -281,7 +281,12 @@
 				</div>
 			</div>
 		</div>
-		<button class="btn btn-default set-check-btn">Check for Sets</button>
-        <div class="alert">There are duplicate cards! Please fix them to the correct ones.</div>
+		<div class="set-check-container">
+            <button class="btn btn-default set-check-btn">Check for Sets</button>
+            <label><input type="checkbox" checked class="show-set"> &nbsp;Show me the set.</label>
+        </div>
+        <div class="alert" id="duplicates">There are duplicate cards! Please fix them to the correct ones.</div>
+        <div class="alert" id="no-set">There are no sets here!</div>
+        <div class="alert" id="set">There is a set!</div>
 	</body>
 </html>
