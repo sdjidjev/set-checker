@@ -39,6 +39,23 @@ $(document).ready(function(){
 				}
 			}
 		}
-		
+		else {
+			var cardKeys = Object.keys(dictionary);
+			for (var i = 0; i < cardKeys.length; i++) {
+				for (var j = 1; j < cardKeys.length; j++) {
+					for (var k = 2; k < cardKeys.length;k++) {
+						if (i != j && i != k && j != k) {
+							card1 = cardDict[cardKeys[i]];							
+							card2 = cardDict[cardKeys[j]];
+							card3 = cardDict[cardKeys[k]];
+							for (var m = 0; m < 3; m++) {
+
+							}
+							if (card1[0] == card2[0] == card3[0])
+						}
+					}
+				}
+			}
+		}
 	});
 });
