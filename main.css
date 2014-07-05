@@ -112,6 +112,13 @@ body {
 	margin: 10px;
 }
 
+.instructions {
+	position: absolute;
+	text-align: left;
+	width: 240px;
+	margin-top: 5px;
+}
+
 /** Flip Cards **/
 
 .flip-container {
